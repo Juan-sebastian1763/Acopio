@@ -1,0 +1,13 @@
+.login {
+  display: flex;
+  align-items: center;
+  height: 100vh; 
+  font-size: 30px;
+}
+
+.title-app {
+  text-align: center;
+  font-size: 30px;
+  padding: 10px 30px 50px 30px;
+}
+
