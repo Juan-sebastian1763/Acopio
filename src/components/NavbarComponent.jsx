@@ -8,6 +8,7 @@ import {
   Button,
 } from "@nextui-org/react";
 import Logo from "./Logo";
+import "../../src/assets/css/NavBar.css";
 
 function NavbarComponent() {
   return (
@@ -37,24 +38,24 @@ function NavbarComponent() {
           </NavLink>
         </NavbarBrand>
         <NavbarContent className="hidden sm:flex gap-5" justify="center">
-          <NavbarItem isActive>
-            <NavLink  color="foreground" to={"/"}>
+          <NavbarItem>
+            <NavLink color="foreground" to={"/"}>
               Inicio
             </NavLink>
           </NavbarItem>
           <NavbarItem isActive>
             <NavLink to={"materiales"}>Materiales</NavLink>
           </NavbarItem>
-          <NavbarItem isActive>
+          <NavbarItem>
             <NavLink color="foreground" to={"servicios"}>
               Servicios
             </NavLink>
           </NavbarItem>
         </NavbarContent>
         <NavbarContent justify="end">
-          <NavbarItem className=" lg:flex">
-            <NavLink to={"/login"}>
-              <Button color="primary" variant="bordered" size="lg">
+          <NavbarItem className=" lg:flex ">
+            <NavLink  to={"/login"}>
+              <Button  variant="shadow" size="lg" className="iniciar-sesion">
                 Iniciar Sesion
               </Button>
             </NavLink>

@@ -1,14 +1,13 @@
 import React from "react";
-import { Button,  Card, CardBody, CardFooter, Image } from "@nextui-org/react";
-import "../assets/css/Materiales.css";
+import { Button, Card, CardBody, CardFooter, Image } from "@nextui-org/react";
 import { MaterialesData } from "../api/dataMateriales";
 import { NavLink } from "react-router-dom";
+import "../assets/css/Materiales.css";
 
 function Materiales() {
   return (
     <>
-      <h4> </h4>
-      <div className="gap-2 grid grid-cols-2 sm:grid-cols-2">
+      <div className="gap-5 grid grid-cols-2 sm:grid-cols-5 container-materiales">
         {MaterialesData.map((item) => (
           <Card
             shadow="lg"
@@ -27,17 +26,13 @@ function Materiales() {
                 src={item.img}
               />
             </CardBody>
-            <CardFooter className="text-small justify-between">
-              <b>
-                <span className="nombre-material">Nombre del material</span>{" "}
-                {item.nombre}
+            <CardFooter className="text-lg justify-between">
+              <b className="uppercase">
+                <span className="nombre-material "></span> {item.nombre}
               </b>
-              <b>Cantidad: {item.cantidad_disponible}</b>
-              <b>Color: {item.color}</b>
-              <p className="text-default-500">{item.price}</p>
-              <NavLink to={`/Materiales/${item.id}`}>
-                <Button color="primary" variant="bordered">
-                  Ver Información...
+              <NavLink to={`/materiales/${item.id}`}>
+                <Button variant="shadow" className="button-ver">
+                  Ver Material
                 </Button>
               </NavLink>
             </CardFooter>

@@ -31,7 +31,7 @@ export const MaterialesData = [
   },
   {
     id: 4,
-    nombre: "Computador Corporativo",
+    nombre: "Computador ",
     tipo: "Electronico",
     cantidad_disponible: 32,
     estado: "Usado",
